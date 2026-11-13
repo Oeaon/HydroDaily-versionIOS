@@ -1,0 +1,207 @@
+{
+  "@@locale": "es",
+  "navToday": "Hoy",
+  "navProfile": "Perfil",
+  "todayTitle": "Tu hidratación",
+  "todayOfGoal": "de {p1}",
+  "todayRemaining": "Te faltan {p1} para alcanzar tu objetivo",
+  "todayGoalReached": "¡Objetivo cumplido! Sigue hidratándote 💧",
+  "todayAddTitle": "Añadir agua",
+  "todayUndo": "Deshacer",
+  "todayNoProfileTitle": "Configura tu perfil",
+  "todayNoProfileBody": "Calcula tu objetivo diario de agua para empezar a registrar lo que bebes.",
+  "todayNoProfileAction": "Calcular mi objetivo",
+  "statGoal": "Objetivo",
+  "statRemaining": "Restante",
+  "statEntries": "Registros",
+  "profileTitle": "Tu perfil",
+  "profileSubtitle": "Calcula cuánta agua necesitas cada día",
+  "profileWeightLabel": "Peso",
+  "profileWeightError": "Introduce un peso entre 20 y 300 kg",
+  "profileGenderLabel": "Sexo",
+  "genderFemale": "Mujer",
+  "genderMale": "Hombre",
+  "profileGenderError": "Selecciona una opción",
+  "profileActivityLabel": "Actividad física",
+  "activityLow": "Baja",
+  "activityModerate": "Moderada",
+  "activityHigh": "Alta",
+  "activityLowDesc": "Poco o ningún ejercicio a la semana.",
+  "activityModerateDesc": "Ejercicio entre 3 y 5 días a la semana.",
+  "activityHighDesc": "Ejercicio intenso casi todos los días.",
+  "profileActivityError": "Selecciona tu nivel de actividad",
+  "profileCalculate": "Calcular mi objetivo",
+  "profileGoalTitle": "Tu objetivo diario",
+  "profileGoalHint": "Este cálculo es orientativo. Si tienes necesidades específicas de salud, consulta con un profesional sanitario.",
+  "settingsTitle": "Ajustes",
+  "settingsReminders": "Recibir recordatorios",
+  "settingsNotificationsBlocked": "Las notificaciones están desactivadas para esta app.",
+  "settingsEnable": "Activar",
+  "settingsPrivacy": "Opciones de privacidad",
+  "settingsPrivacyPolicy": "Política de privacidad",
+  "notificationTitle": "¡Hora de beber agua! 💧",
+  "notificationBodyProgress": "Llevas {p1} de {p2}. Bebe un vaso ahora y sigue sumando.",
+  "notificationBodyGoalReached": "¡Ya has cumplido tu objetivo de hoy! Sigue así.",
+  "notificationBodyNoProfile": "Calcula tu objetivo diario y empieza a cuidar tu hidratación.",
+  "reminderChannelName": "Recordatorios",
+  "reminderChannelDescription": "Avisos para recordarte beber agua.",
+  "streakNone": "Aún no tienes racha",
+  "streakStartHint": "Cumple tu objetivo hoy para empezar una racha.",
+  "streakKeepHint": "Cumple tu objetivo hoy para mantenerla.",
+  "streakCompletedToday": "¡Hoy ya has sumado un día más!",
+  "streakBest": "Mejor",
+  "remindersTitle": "Recordatorios",
+  "reminderSummaryOff": "Desactivados",
+  "reminderSummaryNoDays": "Elige al menos un día",
+  "reminderSummaryOnce": "A las {p1}",
+  "reminderSummaryInterval": "Cada {p1}, de {p2} a {p3}",
+  "reminderSummaryEveryDay": "todos los días",
+  "reminderFrequency": "Frecuencia",
+  "reminderFrequencyOnce": "Una vez al día",
+  "durationHours": "{p1} h",
+  "durationHoursMinutes": "{p1} h {p2} min",
+  "reminderTime": "Hora",
+  "reminderFrom": "Desde",
+  "reminderUntil": "Hasta",
+  "reminderDays": "Días",
+  "reminderSkipWhenReached": "Silenciar al cumplir el objetivo",
+  "reminderSkipWhenReachedDesc": "No recibirás más avisos ese día.",
+  "premiumDesc": "Disfruta de HydroDaily sin anuncios. Elige un pago único para siempre o una suscripción mensual.",
+  "premiumActive": "Ya eres Premium. ¡Gracias por tu apoyo!",
+  "premiumRestore": "Restaurar compra",
+  "premiumPending": "Compra pendiente de confirmación…",
+  "premiumErrorStore": "La tienda no está disponible ahora mismo. Inténtalo más tarde.",
+  "premiumErrorProduct": "No se ha podido cargar el producto. Inténtalo más tarde.",
+  "premiumErrorFailed": "No se ha podido completar la compra.",
+  "premiumNothingToRestore": "No se han encontrado compras que restaurar.",
+  "premiumRestored": "Compra restaurada. ¡Ya no verás anuncios!",
+  "premiumActiveMonthly": "Tu suscripción sin anuncios está activa. ¡Gracias por tu apoyo!",
+  "premiumBuyLifetime": "Para siempre por {p1}",
+  "premiumBuyLifetimeNoPrice": "Quitar anuncios para siempre",
+  "premiumBuyMonthly": "{p1} al mes",
+  "premiumBuyMonthlyNoPrice": "Suscripción mensual",
+  "premiumManageSubscription": "Gestionar o cancelar suscripción",
+  "streakCurrent": "{p1, plural, one{{p1} día seguido} other{{p1} días seguidos}}",
+  "notificationBodyStreak": "{p3, plural, one{Llevas {p1} de {p2}. ¡No pierdas tu racha de {p3} día!} other{Llevas {p1} de {p2}. ¡No pierdas tu racha de {p3} días!}}",
+  "@todayOfGoal": {
+    "placeholders": {
+      "p1": {
+        "type": "String"
+      }
+    }
+  },
+  "@todayRemaining": {
+    "placeholders": {
+      "p1": {
+        "type": "String"
+      }
+    }
+  },
+  "@notificationBodyProgress": {
+    "placeholders": {
+      "p1": {
+        "type": "String"
+      },
+      "p2": {
+        "type": "String"
+      }
+    }
+  },
+  "@reminderSummaryOnce": {
+    "placeholders": {
+      "p1": {
+        "type": "String"
+      }
+    }
+  },
+  "@reminderSummaryInterval": {
+    "placeholders": {
+      "p1": {
+        "type": "String"
+      },
+      "p2": {
+        "type": "String"
+      },
+      "p3": {
+        "type": "String"
+      }
+    }
+  },
+  "@durationHours": {
+    "placeholders": {
+      "p1": {
+        "type": "int"
+      }
+    }
+  },
+  "@durationHoursMinutes": {
+    "placeholders": {
+      "p1": {
+        "type": "int"
+      },
+      "p2": {
+        "type": "int"
+      }
+    }
+  },
+  "@premiumBuyLifetime": {
+    "placeholders": {
+      "p1": {
+        "type": "String"
+      }
+    }
+  },
+  "@premiumBuyMonthly": {
+    "placeholders": {
+      "p1": {
+        "type": "String"
+      }
+    }
+  },
+  "@streakCurrent": {
+    "placeholders": {
+      "p1": {
+        "type": "int"
+      }
+    }
+  },
+  "@notificationBodyStreak": {
+    "placeholders": {
+      "p1": {
+        "type": "String"
+      },
+      "p2": {
+        "type": "String"
+      },
+      "p3": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumHeadline": "Pásate a Premium",
+  "premiumBenefitNoAds": "Sin anuncios",
+  "premiumLoading": "Cargando precio…",
+  "premiumLegal": "La suscripción se renueva cada mes y puedes cancelarla cuando quieras en los ajustes de tu cuenta del App Store.",
+  "termsOfUse": "Términos de uso",
+  "notificationBodyGeneric": "Bebe un vaso de agua y acércate a tu objetivo de hoy.",
+  "premiumTitle": "HydroDaily Premium",
+  "premiumMonthly": "{p1} al mes",
+  "@premiumMonthly": {
+    "placeholders": {
+      "p1": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumLifetime": "Para siempre por {p1}",
+  "@premiumLifetime": {
+    "placeholders": {
+      "p1": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumStoreUnavailable": "La tienda no está disponible ahora mismo. Inténtalo más tarde.",
+  "privacyPolicy": "Política de privacidad",
+  "privacyOptions": "Opciones de privacidad"
+}
