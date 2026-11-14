@@ -119,18 +119,26 @@ class _RootState extends State<Root> with WidgetsBindingObserver {
     );
   }
 
-  Future<void> _reschedule() async {
-    if (!mounted) return;
-    final texts = _texts();
-    _notificationsBlocked.value = await widget.reminders.areBlocked();
-    await widget.reminders.reschedule(_store.reminders, goalReachedToday: _store.status.isGoalReached, texts: texts);
+  Future<void> _rescheduling = Future.value();
+
+  /// Reprograma los avisos en segundo plano. Programar 60 avisos tarda, así que no se espera, pero
+  /// las reprogramaciones van en fila para que una no borre a medias lo que hace otra.
+  void _reschedule() {
+    _rescheduling = _rescheduling.then((_) async {
+      if (!mounted) return;
+      final texts = _texts();
+      final settings = _store.reminders;
+      final goalReached = _store.status.isGoalReached;
+      _notificationsBlocked.value = await widget.reminders.areBlocked();
+      await widget.reminders.reschedule(settings, goalReachedToday: goalReached, texts: texts);
+    }).catchError((Object _) {});
   }
 
   Future<void> _addWater(int ml) async {
     HapticFeedback.mediumImpact();
     _drop.stop().then((_) => _drop.resume());
     final reachedNow = await _store.addWater(ml);
-    await _reschedule();
+    _reschedule();
     if (reachedNow && await _store.claimReviewPrompt(_store.streak.current)) {
       final review = InAppReview.instance;
       if (await review.isAvailable()) review.requestReview();
@@ -139,12 +147,14 @@ class _RootState extends State<Root> with WidgetsBindingObserver {
 
   Future<void> _undo() async {
     await _store.undoLast();
-    await _reschedule();
+    _reschedule();
   }
 
   Future<void> _saveProfile(double weightKg, Gender gender, ActivityLevel activity) async {
     await _store.saveProfile(weightKg, gender, activity);
-    await _reschedule();
+    // Los recordatorios vienen activados: el permiso se pide cuando ya hay un objetivo que recordar.
+    if (_store.reminders.enabled) await widget.reminders.requestPermission();
+    _reschedule();
     // Guardar el perfil es una pausa natural para un intersticial (con límite de frecuencia).
     widget.monetization.maybeShowInterstitial(() {
       if (mounted) setState(() => _tab = 0);
@@ -152,10 +162,10 @@ class _RootState extends State<Root> with WidgetsBindingObserver {
   }
 
   Future<void> _changeReminders(ReminderSettings settings) async {
-    final enabling = settings.enabled && !_store.reminders.enabled;
     await _store.saveReminders(settings);
-    if (enabling || settings.enabled) await widget.reminders.requestPermission();
-    await _reschedule();
+    // Si ya se concedió o denegó, el sistema responde sin volver a preguntar.
+    if (settings.enabled) await widget.reminders.requestPermission();
+    _reschedule();
   }
 
   void _openPremium() {
