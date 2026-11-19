@@ -45,7 +45,7 @@ class _AdBannerState extends State<AdBanner> {
   }
 
   Future<void> _load() async {
-    if (!widget.monetization.showAds || !mounted) return;
+    if (AdUnits.banner.isEmpty || !widget.monetization.showAds || !mounted) return;
     final width = MediaQuery.sizeOf(context).width.truncate();
     if (width == _loadedWidth) return;
     _loadedWidth = width;
