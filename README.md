@@ -8,7 +8,7 @@ la racha de días cumpliendo el objetivo y recibe recordatorios configurables. P
 - iOS 15 o superior
 - Idiomas: español, inglés, árabe, alemán, francés, hindi, italiano, portugués, ruso y chino
 - Anuncios con AdMob (consentimiento con UMP) y Premium con compras de Apple:
-  `premium_monthly` (suscripción mensual, 1,99 €) y `premium_lifetime` (compra no consumible, 9,99 €)
+  `com.oeaon.hydrodaily.premium_monthly` (suscripción mensual, 1,99 €) y `com.oeaon.hydrodaily.premium_lifetime` (compra no consumible, 9,99 €)
 
 ## Desarrollo
 
